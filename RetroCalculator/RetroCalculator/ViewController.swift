@@ -56,7 +56,6 @@ class ViewController: UIViewController {
         }
         
         outputLbl.text = "0"
-        
         typeLabel.text = "DEC"
     }
 
@@ -65,7 +64,29 @@ class ViewController: UIViewController {
         //when a number is pressed from 1-9 we play a sound
             playSound()
         //we use sender.tag, because we used the tag attribute for every button from 1 ot 9 in the storyboard. We then append the content of the tag to the runningNumber
-        runningNumber += "\(sender.tag)"
+        
+        if sender.tag == 21 {
+            runningNumber += "A"
+        }
+        else if sender.tag == 22 {
+            runningNumber += "B"
+        }
+        else if sender.tag == 23 {
+            runningNumber += "C"
+        }
+        else if sender.tag == 24 {
+            runningNumber += "D"
+        }
+        else if sender.tag == 25 {
+            runningNumber += "E"
+        }
+        else if sender.tag == 26 {
+            runningNumber += "F"
+        }
+        else{
+            runningNumber += "\(sender.tag)"
+        }
+        
         
         //we append the running number to the label that we are using
         outputLbl.text = runningNumber
@@ -144,8 +165,6 @@ class ViewController: UIViewController {
                 runningNumber = ""
                 let leftSideVal = Int(leftValStr, radix: 8)!
                 let rightSideVal = Int(leftValStr, radix: 8)!
-                print(leftSideVal)
-                print(rightSideVal)
                 
                 if currentOperation == Operation.Multiply {
                     result = "\(leftSideVal * rightSideVal)"
@@ -181,8 +200,7 @@ class ViewController: UIViewController {
                 runningNumber = ""
                 let leftSideVal = Int(leftValStr, radix: 16)!
                 let rightSideVal = Int(leftValStr, radix: 16)!
-                print(leftSideVal)
-                print(rightSideVal)
+                
                 
                 if currentOperation == Operation.Multiply {
                     result = "\(leftSideVal * rightSideVal)"
@@ -218,8 +236,6 @@ class ViewController: UIViewController {
                 runningNumber = ""
                 let leftSideVal = Int(leftValStr, radix: 2)!
                 let rightSideVal = Int(leftValStr, radix: 2)!
-                print(leftSideVal)
-                print(rightSideVal)
                 
                 if currentOperation == Operation.Multiply {
                     result = "\(leftSideVal * rightSideVal)"
@@ -319,17 +335,32 @@ class ViewController: UIViewController {
     
     @IBAction func transform(_ sender: Any) {
         
-        switch typeLabel.text! {
-        case "BIN":
-            outputLbl.text! = String(Int(result)!, radix: 2)
-        case "OCT":
-            outputLbl.text! = String(Int(result)!, radix: 8)
-        case "HEX":
-            outputLbl.text! = String(Int(result)!, radix: 16)
-        default:
-            break
-        }
+        let regexHex = try! NSRegularExpression(pattern: "^[a-fA-F0-9]+$", options: [])
+       
         
+        if outputLbl.text != "0" {
+            switch typeLabel.text! {
+            case "BIN":
+                outputLbl.text! = String(Int(result)!, radix: 2)
+            case "OCT":
+                outputLbl.text! = String(Int(result)!, radix: 8)
+            case "HEX":
+                let matches = regexHex.matches(in: outputLbl.text!, options: [], range: NSRange(location: 0, length: outputLbl.text!.characters.count))
+                
+                if matches.count > 0 {
+                    
+                    if let number = Int(outputLbl.text!) {
+                        
+                        if number != 1 {
+                            outputLbl.text! = String(Int(result)!, radix: 16)
+                        }
+                    }
+                }
+                
+            default:
+                break
+            }
+        }
         
     }
     
