@@ -335,7 +335,7 @@ class ViewController: UIViewController {
     
     @IBAction func transform(_ sender: Any) {
         
-        let regexHex = try! NSRegularExpression(pattern: "^[a-fA-F0-9]+$", options: [])
+       // let regexHex = try! NSRegularExpression(pattern: "^[a-fA-F0-9]+$", options: [])
        
         
         if outputLbl.text != "0" {
@@ -345,16 +345,13 @@ class ViewController: UIViewController {
             case "OCT":
                 outputLbl.text! = String(Int(result)!, radix: 8)
             case "HEX":
-                let matches = regexHex.matches(in: outputLbl.text!, options: [], range: NSRange(location: 0, length: outputLbl.text!.characters.count))
-                
-                if matches.count > 0 {
                     
-                    if let number = Int(outputLbl.text!) {
+                if let number = Int(outputLbl.text!) {
                         
-                        if number != 1 {
-                            outputLbl.text! = String(Int(result)!, radix: 16)
-                        }
-                    }
+                 if number != 1 {
+                   outputLbl.text! = String(Int(result)!, radix: 16)
+                 }
+                
                 }
                 
             default:
