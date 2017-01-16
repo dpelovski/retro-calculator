@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var outputLbl: UILabel!
     
+    @IBOutlet weak var stackHex: UIStackView!
     var btnSound: AVAudioPlayer!
     
     // currentOperation starts with empty
@@ -33,12 +34,6 @@ class ViewController: UIViewController {
         case Subtract = "-"
         case Add = "+"
         case Empty = "Empty"
-    }
-    
-    enum CalcSystem: String {
-        case Binary = "BIN"
-        case Decimal = "DEC"
-        case Hexadecimal = "HEX"
     }
 
     override func viewDidLoad() {
@@ -120,10 +115,12 @@ class ViewController: UIViewController {
     func processOperation(operation: Operation, inSystem: String) {
         playSound()
         
-        
         switch inSystem {
         case "BIN":
             calculateBin(operation: operation)
+            break
+        case "OCT":
+            calculateOct(operation: operation)
             break
         case "DEC":
             calculateDecimal(operation: operation)
@@ -136,6 +133,43 @@ class ViewController: UIViewController {
         }
         
         
+    }
+    
+    func calculateOct(operation: Operation) {
+        if currentOperation != Operation.Empty {
+            
+            //The user selected an operator,but then selected another operator without first entering a number
+            if runningNumber != "" {
+                rightValStr = runningNumber
+                runningNumber = ""
+                let leftSideVal = Int(leftValStr, radix: 8)!
+                let rightSideVal = Int(leftValStr, radix: 8)!
+                print(leftSideVal)
+                print(rightSideVal)
+                
+                if currentOperation == Operation.Multiply {
+                    result = "\(leftSideVal * rightSideVal)"
+                } else if currentOperation == Operation.Divide {
+                    result = "\(leftSideVal / rightSideVal)"
+                } else if currentOperation == Operation.Subtract {
+                    result = "\(leftSideVal - rightSideVal)"
+                } else if currentOperation == Operation.Add {
+                    result = "\(leftSideVal + rightSideVal)"
+                }
+                
+                leftValStr = result
+                outputLbl.text = result
+            }
+            
+            currentOperation = operation
+        } else {
+            //This is the first time an operator has been pressed
+            leftValStr = runningNumber
+            runningNumber = ""
+            
+            currentOperation = operation
+        }
+
     }
     
     func calculateHex(operation: Operation) {
@@ -258,17 +292,46 @@ class ViewController: UIViewController {
         playSound()
         typeLabel.text = "BIN"
         restartAfterChoosingType()
+        stackHex.isHidden = true
+
     }
     
     @IBAction func hexPressed(_ sender: Any) {
         playSound()
         typeLabel.text = "HEX"
         restartAfterChoosingType()
+        stackHex.isHidden = false
     }
     @IBAction func decPressed(_ sender: Any) {
         playSound()
         typeLabel.text = "DEC"
         restartAfterChoosingType()
+        stackHex.isHidden = true
+
     }
+    @IBAction func octPressed(_ sender: Any) {
+        playSound()
+        typeLabel.text = "OCT"
+        restartAfterChoosingType()
+        stackHex.isHidden = true
+
+    }
+    
+    @IBAction func transform(_ sender: Any) {
+        
+        switch typeLabel.text! {
+        case "BIN":
+            outputLbl.text! = String(Int(result)!, radix: 2)
+        case "OCT":
+            outputLbl.text! = String(Int(result)!, radix: 8)
+        case "HEX":
+            outputLbl.text! = String(Int(result)!, radix: 16)
+        default:
+            break
+        }
+        
+        
+    }
+    
 }
 

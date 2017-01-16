@@ -246,8 +246,8 @@
                                     <constraint firstAttribute="height" constant="70" id="BNH-Br-QhF"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLh-KY-G0E">
-                                <rect key="frame" x="133" y="516" width="170" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLh-KY-G0E">
+                                <rect key="frame" x="168" y="514" width="170" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Hjp-ZR-sxY"/>
                                     <constraint firstAttribute="width" constant="170" id="pz1-nV-d5G"/>
@@ -276,20 +276,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="aCl-kB-j7R">
-                                <rect key="frame" x="27" y="203" width="61" height="64"/>
+                                <rect key="frame" x="27" y="127" width="61" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="Yk5-FI-zRX">
-                                <rect key="frame" x="27" y="281" width="61" height="64"/>
+                                <rect key="frame" x="27" y="205" width="61" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="0Qe-Jn-MJX">
+                                <rect key="frame" x="27" y="281" width="61" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="Oic-Dg-r7P">
                                 <rect key="frame" x="27" y="353" width="61" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-51-2yR">
-                                <rect key="frame" x="34" y="220" width="46" height="30"/>
+                                <rect key="frame" x="34" y="144" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
                                 <state key="normal" title="BIN">
@@ -300,7 +304,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXT-kV-cJn">
-                                <rect key="frame" x="34" y="298" width="46" height="30"/>
+                                <rect key="frame" x="34" y="370" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
                                 <state key="normal" title=" HEX">
@@ -311,7 +315,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rf-RI-6An">
-                                <rect key="frame" x="34" y="370" width="46" height="30"/>
+                                <rect key="frame" x="34" y="298" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
                                 <state key="normal" title="DEC">
@@ -321,19 +325,113 @@
                                     <action selector="decPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RsI-VK-ncZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV6-sQ-OuB">
+                                <rect key="frame" x="34" y="222" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
+                                <state key="normal" title="OCT">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="octPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CDr-mb-GjY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVO-uO-5N4">
+                                <rect key="frame" x="34" y="514" width="121" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="18"/>
+                                <state key="normal" title="TRANSFORM" backgroundImage="space-bg">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="transform:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pZf-l5-Fvk"/>
+                                </connections>
+                            </button>
+                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="znX-x6-fFG">
+                                <rect key="frame" x="0.0" y="612" width="375" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmI-sq-lM3">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="5k2-S3-fKc"/>
+                                            <constraint firstAttribute="height" constant="50" id="v01-40-dgo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
+                                        <state key="normal" title="A" backgroundImage="dot">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtM-z9-4LF">
+                                        <rect key="frame" x="65" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="NDt-vU-4vc"/>
+                                            <constraint firstAttribute="width" constant="50" id="ihj-pp-hLh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
+                                        <state key="normal" title="B" backgroundImage="dot">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tc-C6-O98">
+                                        <rect key="frame" x="130" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="LH1-AE-wgu"/>
+                                            <constraint firstAttribute="height" constant="50" id="kbY-UN-Fjk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
+                                        <state key="normal" title="C" backgroundImage="dot">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNS-WW-8is">
+                                        <rect key="frame" x="195" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mFU-ok-46D"/>
+                                            <constraint firstAttribute="width" constant="50" id="vMX-a7-yXr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
+                                        <state key="normal" title="D" backgroundImage="dot">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9md-1A-x56">
+                                        <rect key="frame" x="260" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Bz8-11-05S"/>
+                                            <constraint firstAttribute="height" constant="50" id="Zzg-Ul-yRM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
+                                        <state key="normal" title="E" backgroundImage="dot">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deb-9w-Vzg">
+                                        <rect key="frame" x="325" y="0.0" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="hIE-nz-bRR"/>
+                                            <constraint firstAttribute="width" constant="50" id="okK-2a-Vzp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
+                                        <state key="normal" title="F" backgroundImage="dot">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JqZ-Nz-pH8" firstAttribute="top" secondItem="vLh-KY-G0E" secondAttribute="bottom" constant="31" id="27i-Yz-vfJ"/>
                             <constraint firstItem="GgL-kw-6fU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="28.5" id="AFr-Ha-fK6"/>
                             <constraint firstItem="Z8G-ac-ETF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DrU-Kx-ZQk"/>
                             <constraint firstItem="XOv-nX-loI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EIO-rA-8hL"/>
                             <constraint firstItem="Z8G-ac-ETF" firstAttribute="top" secondItem="GgL-kw-6fU" secondAttribute="bottom" constant="10" id="FY5-eE-paB"/>
                             <constraint firstItem="GgL-kw-6fU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="15" id="GTa-nq-KaS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vLh-KY-G0E" secondAttribute="trailing" constant="21" id="K8Z-Nc-ZCh"/>
                             <constraint firstAttribute="trailing" secondItem="XOv-nX-loI" secondAttribute="trailing" id="Mum-uK-g1Q"/>
                             <constraint firstItem="JqZ-Nz-pH8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Y6R-NL-E2P"/>
                             <constraint firstAttribute="trailing" secondItem="JqZ-Nz-pH8" secondAttribute="trailing" id="aSs-PC-LaQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vLh-KY-G0E" secondAttribute="trailing" constant="82" id="ije-uz-zZz"/>
+                            <constraint firstItem="JqZ-Nz-pH8" firstAttribute="top" secondItem="vLh-KY-G0E" secondAttribute="bottom" constant="33" id="kYr-mZ-O4c"/>
                             <constraint firstItem="XOv-nX-loI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qGh-El-hz4"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XOv-nX-loI" secondAttribute="bottom" id="xE9-Xd-wM9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JqZ-Nz-pH8" secondAttribute="bottom" id="zHy-UC-BCd"/>
@@ -341,6 +439,7 @@
                     </view>
                     <connections>
                         <outlet property="outputLbl" destination="5sx-Ns-zOr" id="FvU-6g-l93"/>
+                        <outlet property="stackHex" destination="znX-x6-fFG" id="YpX-g2-YyL"/>
                         <outlet property="typeLabel" destination="HCO-7l-bKf" id="SDM-7I-E1N"/>
                     </connections>
                 </viewController>
